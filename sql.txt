@@ -1,0 +1,134 @@
+CREATE TABLE grocery_items (
+    item_id INT AUTO_INCREMENT PRIMARY KEY,
+    item_name VARCHAR(100) NOT NULL,
+    category VARCHAR(50),
+    quantity INT DEFAULT 0,
+    unit_price DECIMAL(10,2) NOT NULL,
+    supplier VARCHAR(100),
+    expiry_date DATE,
+    date_added TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO grocery_items (item_name, category, quantity, unit_price, supplier, expiry_date)
+VALUES
+('Indomie Mi Goreng','Instant Noodles',200,3500.00,'Indofood','2027-01-01'),
+('Indomie Ayam Bawang','Instant Noodles',180,3500.00,'Indofood','2027-01-01'),
+('Mie Sedaap Soto','Instant Noodles',160,3200.00,'Wings Food','2027-01-01'),
+('Mie Sedaap Kari Ayam','Instant Noodles',150,3200.00,'Wings Food','2027-01-01'),
+('Supermi Chicken','Instant Noodles',140,3000.00,'Indofood','2027-01-01'),
+
+('Kopiko Coffee Candy','Snacks',200,5000.00,'Mayora','2027-01-01'),
+('Deka Wafer Roll','Snacks',180,7500.00,'Deka','2027-01-01'),
+('Beng-Beng Chocolate','Snacks',150,8000.00,'Mayora','2027-01-01'),
+('SilverQueen Chocolate Bar','Snacks',100,15000.00,'PT Petra','2027-01-01'),
+('Chitato Potato Chips','Snacks',120,12000.00,'Indofood','2027-01-01'),
+
+('Teh Botol Sosro','Beverages',90,5000.00,'Sosro','2027-03-01'),
+('Aqua Mineral Water 1.5L','Beverages',200,6000.00,'Danone Aqua','2027-03-01'),
+('Pocari Sweat','Beverages',150,8000.00,'Otsuka','2027-03-01'),
+('Fruit Tea Apple','Beverages',130,7000.00,'Sosro','2027-03-01'),
+('Good Day Cappuccino','Beverages',140,7500.00,'Mayora','2027-03-01'),
+
+('ABC Kecap Manis','Condiments',150,12000.00,'Heinz ABC','2028-01-01'),
+('Bango Kecap Manis','Condiments',140,15000.00,'Unilever Indonesia','2028-01-01'),
+('Sambal ABC','Condiments',130,10000.00,'Heinz ABC','2028-01-01'),
+('Sambal Indofood','Condiments',120,9500.00,'Indofood','2028-01-01'),
+('Royco Chicken Seasoning','Condiments',110,8500.00,'Unilever Indonesia','2028-01-01'),
+
+('Ayam Goreng Tepung','Frozen Food',80,25000.00,'So Good','2027-02-01'),
+('So Good Nugget Ayam','Frozen Food',90,28000.00,'So Good','2027-02-01'),
+('Fiesta Chicken Nugget','Frozen Food',70,30000.00,'Fiesta','2027-02-01'),
+('Champ Chicken Sausage','Frozen Food',60,22000.00,'Champ','2027-02-01'),
+('Bernardi Beef Sausage','Frozen Food',50,35000.00,'Bernardi','2027-02-01'),
+
+('Rice 5kg','Staple',100,65000.00,'Indonesian Farmers','2027-01-01'),
+('Tempeh','Staple',80,10000.00,'Local Market','2026-10-20'),
+('Tofu','Staple',90,9000.00,'Local Market','2026-10-20'),
+('Kerupuk Udang','Snacks',120,15000.00,'Local Producers','2027-01-01'),
+('Kerupuk Ikan','Snacks',110,14000.00,'Local Producers','2027-01-01'),
+
+('Papaya','Produce',70,12000.00,'Local Farmers','2026-10-20'),
+('Banana Pisang Raja','Produce',80,15000.00,'Local Farmers','2026-10-20'),
+('Mango Harum Manis','Produce',60,20000.00,'Local Farmers','2026-10-20'),
+('Salak Fruit','Produce',50,18000.00,'Local Farmers','2026-10-20'),
+('Durian Monthong','Produce',40,75000.00,'Local Farmers','2026-10-20'),
+
+('Ikan Lele (Catfish)','Seafood',60,25000.00,'Local Market','2026-10-15'),
+('Ikan Nila (Tilapia)','Seafood',50,28000.00,'Local Market','2026-10-15'),
+('Ikan Bandeng (Milkfish)','Seafood',40,30000.00,'Local Market','2026-10-15'),
+('Udang Segar (Shrimp)','Seafood',35,45000.00,'Local Market','2026-10-15'),
+('Cumi-Cumi (Squid)','Seafood',30,50000.00,'Local Market','2026-10-15'),
+
+('Pepsodent Toothpaste','Personal Care',100,12000.00,'Unilever Indonesia','2029-01-01'),
+('Lifebuoy Soap','Personal Care',150,5000.00,'Unilever Indonesia','2029-01-01'),
+('Clear Shampoo','Personal Care',80,25000.00,'Unilever Indonesia','2029-01-01'),
+('Pantene Conditioner','Personal Care',70,28000.00,'Procter & Gamble','2029-01-01'),
+('Molto Fabric Softener','Household',90,15000.00,'Unilever Indonesia','2029-01-01'),
+
+('Indomie Rendang','Instant Noodles',200,3500.00,'Indofood','2027-01-01'),
+('Indomie Ayam Geprek','Instant Noodles',180,3500.00,'Indofood','2027-01-01'),
+('Mie Sedaap Sambal Goreng','Instant Noodles',160,3200.00,'Wings Food','2027-01-01'),
+('Supermi Soto','Instant Noodles',150,3000.00,'Indofood','2027-01-01'),
+('Sarimi Isi 2','Instant Noodles',140,2800.00,'Indofood','2027-01-01'),
+
+('Roma Marie Biscuits','Snacks',200,12000.00,'Mayora','2027-01-01'),
+('Roma Kelapa Biscuits','Snacks',180,13000.00,'Mayora','2027-01-01'),
+('Better Wafer','Snacks',160,15000.00,'Mayora','2027-01-01'),
+('Astor Wafer Roll','Snacks',140,16000.00,'Mayora','2027-01-01'),
+('Tango Wafer','Snacks',130,14000.00,'Orang Tua Group','2027-01-01'),
+
+('Teh Pucuk Harum','Beverages',150,5000.00,'Mayora','2027-03-01'),
+('Floridina Orange','Beverages',140,6000.00,'Mayora','2027-03-01'),
+('Ale-Ale Drink','Beverages',130,4000.00,'Mayora','2027-03-01'),
+('Kratingdaeng Energy Drink','Beverages',120,8000.00,'Kratingdaeng','2027-03-01'),
+('You C1000 Vitamin Drink','Beverages',110,12000.00,'You C1000','2027-03-01'),
+
+('ABC Sambal Extra Pedas','Condiments',150,10000.00,'Heinz ABC','2028-01-01'),
+('Bango Light Soy Sauce','Condiments',140,15000.00,'Unilever Indonesia','2028-01-01'),
+('Indofood Sambal Hijau','Condiments',130,9500.00,'Indofood','2028-01-01'),
+('Royco Beef Seasoning','Condiments',120,8500.00,'Unilever Indonesia','2028-01-01'),
+('Sasa Tepung Bumbu','Condiments',110,12000.00,'Sasa','2028-01-01'),
+
+('Fiesta Chicken Karaage','Frozen Food',90,32000.00,'Fiesta','2027-02-01'),
+('So Good Chicken Wings','Frozen Food',80,28000.00,'So Good','2027-02-01'),
+('Champ Beef Sausage','Frozen Food',70,35000.00,'Champ','2027-02-01'),
+('Bernardi Chicken Sausage','Frozen Food',60,30000.00,'Bernardi','2027-02-01'),
+('Kimbo Beef Sausage','Frozen Food',50,34000.00,'Kimbo','2027-02-01'),
+
+('Rice 10kg','Staple',100,120000.00,'Indonesian Farmers','2027-01-01'),
+('Cassava','Staple',80,15000.00,'Local Market','2026-10-20'),
+('Sweet Potato','Staple',90,18000.00,'Local Market','2026-10-20'),
+('Corn on Cob','Staple',70,20000.00,'Local Market','2026-10-20'),
+('Sago Flour','Staple',60,25000.00,'Local Producers','2026-10-20'),
+
+('Avocado','Produce',90,25000.00,'Local Farmers','2026-10-20'),
+('Guava','Produce',80,20000.00,'Local Farmers','2026-10-20'),
+('Starfruit','Produce',70,18000.00,'Local Farmers','2026-10-20'),
+('Rambutan','Produce',60,22000.00,'Local Farmers','2026-10-20'),
+('Mangosteen','Produce',50,30000.00,'Local Farmers','2026-10-20'),
+
+('Ikan Kembung (Mackerel)','Seafood',60,28000.00,'Local Market','2026-10-15'),
+('Ikan Tongkol (Skipjack)','Seafood',50,30000.00,'Local Market','2026-10-15'),
+('Ikan Kakap Merah (Red Snapper)','Seafood',40,45000.00,'Local Market','2026-10-15'),
+('Ikan Tuna','Seafood',35,60000.00,'Local Market','2026-10-15'),
+('Ikan Gurame','Seafood',30,55000.00,'Local Market','2026-10-15'),
+
+('Pepsodent Herbal','Personal Care',100,13000.00,'Unilever Indonesia','2029-01-01'),
+('Lifebuoy Handwash','Personal Care',150,15000.00,'Unilever Indonesia','2029-01-01'),
+('Clear Men Shampoo','Personal Care',80,28000.00,'Unilever Indonesia','2029-01-01'),
+('Pantene Hair Fall Control','Personal Care',70,30000.00,'Procter & Gamble','2029-01-01'),
+('Molto Pewangi','Household',90,16000.00,'Unilever Indonesia','2029-01-01'),
+
+('Sunlight Dishwashing Liquid','Household',120,15000.00,'Unilever Indonesia','2029-01-01'),
+('Attack Detergent Powder','Household',100,25000.00,'Kao Indonesia','2029-01-01'),
+('Daia Detergent','Household',90,22000.00,'Wings Corp','2029-01-01'),
+('Baygon Insect Spray','Household',80,35000.00,'SC Johnson','2029-01-01'),
+('Hit Anti Nyamuk','Household',70,18000.00,'Wings Corp','2029-01-01'),
+
+('Energen Vanilla Cereal Drink','Beverages',120,7000.00,'Mayora','2027-03-01'),
+('Sari Roti White Bread','Staple',90,18000.00,'Sari Roti','2026-11-01'),
+('Taro Net Seaweed Snack','Snacks',150,8000.00,'Orang Tua Group','2027-01-01'),
+('Indomilk UHT Chocolate Milk','Dairy',100,12000.00,'Indomilk','2027-02-01'),
+('ABC Syrup Cocopandan','Beverages',80,25000.00,'Heinz ABC','2027-03-01');
+
+
